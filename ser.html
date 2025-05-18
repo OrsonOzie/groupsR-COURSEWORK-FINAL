@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ECO TREK</title>
+    <!--favicon-->
+    <link rel="shotcut icon" href="img/IMG-20250512-WA0002.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("img/IMG-20250514-WA0005.jpg");
+            background-size: cover;
+            color: black;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #fff;
+            color: #007bff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nn {
+            width: 100px;
+            height: 50px;
+            border-radius: 16PX;
+        }
+
+        .tour-packages {
+            padding: 50px 20px;
+            text-align: center;
+
+        }
+
+        .tour-packages h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .package-card button {
+            margin: 15px 0 20px;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .package-card button:hover {
+            background: #005bb5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0b1a2e;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/IMG-20250512-WA0002.jpg" alt="logo" class="nn">
+        <div class="logo">ECO TREK TOURS AND TRAVEL</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html">SERVICE</a></li>
+                <li><a href="ronnie.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="ozie.html">ABOUT </a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tour-packages">
+        <h2>OUR SERVICES</h2>
+        <div class="packages-container">
+
+            <div class="package-card">
+                <img src="img/IMG-20250515-WA0002.jpg" alt="Beach Tour">
+                <h3>HOTEL BOOKING</h3>
+                <p>Plan your escape.Browse and book your ideal hotel Today!</p>
+                <a href="hotel.html"><button>Book Now</button></a>
+            </div>
+
+            <div class="package-card">
+                <img src="img/IMG-20250514-WA0007.jpg" alt="Mountain Tour">
+                <h3>FLIGHT BOOKING</h3>
+                <p>Explore the skies.Book your flight Today</p>
+                <a href="flightbooking.html"><button>FLIY NOW</button></a>
+            </div>
+
+            <div class="package-card">
+                <img src="img/IMG-20250514-WA0004.jpg" alt="City Tour">
+                <h3>TOUR PACKAGES</h3>
+                <p>Global adventures Await Explore iconic wonders and diverse cultures on our
+                    world tours</p>
+                <a href="tour.html"><button>TOUR NOW</button></a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Eco Trek Tours and Travel .All rights reserved.
+    </footer>
+</body>
+
+</html>
