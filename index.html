@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO TREK </title>
+    <!--favicon-->
+    <link rel="shotcut icon" href="img/IMG-20250512-WA0002.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('img/alexa_bg.jpg');
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            color: #007bff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-button {
+            background-color: #00bfff;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .header-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            margin-left: 15px;
+        }
+
+        .hero {
+
+
+            text-align: center;
+            padding: 100px 0;
+            opacity: 0.7;
+        }
+
+        .search-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-container h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .search-container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            background-color: #f0f0f0;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            flex-grow: 1;
+            border-radius: 5px 0 0 5px;
+            opacity: 0.8;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .tab:not(:first-child) {
+            margin-left: 5px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .let-go-button {
+            background-color: #ffa500;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .offers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px;
+
+        }
+
+        .offer-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .offer-card h3 {
+            color: #007bff;
+        }
+
+        .offer-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .offer-card button {
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .testimonials {
+            background-color: white;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 16px;
+            opacity: 0.8;
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-header h3 {
+            color: #007bff;
+            margin: 0;
+        }
+
+        .blog-link {
+            text-decoration: none;
+            color: #ffa500;
+            font-weight: bold;
+        }
+
+        .testimonial-avatar {
+            font-size: 3em;
+            color: #ffa500;
+            margin-top: 20px;
+        }
+
+        .special-deals {
+
+            padding: 40px;
+            text-align: center;
+        }
+
+        .special-deal-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .special-deal-card h3 {
+            color: #007bff;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            min-width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .step-card span {
+            background-color: #00bfff;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .step-card h3 {
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .nn {
+            width: 100px;
+            height: 50px;
+            border-radius: 16PX;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/IMG-20250512-WA0002.jpg" alt="logo" class="nn">
+        <div class="logo">ECO TREK TOURS AND TRAVEL</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ser.html">SERVICE</a></li>
+                <li><a href="ronnie.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="ozie.html">ABOUT </a></li>
+
+            </ul>
+
+    </header>
+
+    <section class="hero">
+        <div class="search-container">
+            <h1>Search</h1>
+            <input type="text" placeholder="Destination">
+            <div class="tabs">
+                <button class="tab active">UNEARTH</button>
+                <button class="tab">SHOWCASES</button>
+                <button class="tab">TRIPS</button>
+            </div>
+            <button class="let-go-button">Let's Go!</button>
+        </div>
+    </section>
+
+    <section class="offers">
+        <div class="offer-card">
+            <h3>ADVENTURE AWAITS</h3>
+            <img src="img/nMFVM47An2ISua_qdEYa-[1].png" alt="Offer Image">
+            <p>Embark on unforgettable journeys with ECO TREK TOURS !
+                Discover breathtaking landscapes, connect with nature ,and enjoy
+                Eco-friendly adventures tailored just for you.
+                Your next great escape awaits explore with us today
+            </p>
+            <button>Read Us</button>
+        </div>
+        <div class="offer-card">
+            <h3>YOUR ADVENTURE,OUR COMMITMENT</h3>
+            <img src="img/Ji-8dmJw-Z7PSCBgtKivj[1].png" alt="Offer Image">
+            <p>Hold Us Your Travel Dreams! Trust ECO TREK TOURS for unforgettable adventures,expert guidance and
+                sustainable journeys. Experience the world's wonders with ateam dedicated to making your
+                extraordinary!
+            </p>
+            <button>Hold Us</button>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial-header">
+                <h3>TRAVEL HOTSPOTS</h3>
+                <a href="#" class="blog-link">Blog ></a>
+            </div>
+            <p>Explore top travel hotspots with unique attractions ,local culture and seasonal trips. Discover
+                must-see sights, personal experince and sustainable practices to enhance your adventure.
+                your journey to unforgettable destinations starts here!
+            </p>
+            <div class="testimonial-avatar">😊</div>
+        </div>
+    </section>
+
+    <section class="special-deals">
+        <div class="special-deal-card">
+            <h3>EXCLUSIVE OFFERS</h3>
+            <p>Unlock exclusive offers and limited-time promotions on
+                unforgettable adventures. Enjoy discounted packages and value deals tailored just for you.
+                Don't miss out on the best travel experience Join us Today!
+
+            </p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card">
+                <span>1</span>
+                <h3>DISCOUNTED ECO-FRIENDLY PACKAGES</h3>
+                <p>Eco-Friendly Adventures awaits !Explore sustainable travel options and save
+                    with our discounted packages .
+                    Discover your next green getaway Today!
+                </p>
+            </div>
+            <div class="step-card">
+                <span>2</span>
+                <h3>FREE GUIDED NATURE WALKS</h3>
+                <p>Jion us for free guided nature walks! Explore local trails ,learn about wildlife and connect
+                    .Perfect for all ages experience the beaty of the outdoors with our expert guuides.</p>
+            </div>
+            <div class="step-card">
+                <span>3</span>
+                <h3>EARLY BIRD BOOKING DISCOUNTS</h3>
+                <p>Book early and save! Enjoy exclusive discounts on your next adventure when you reserve your spot in
+                    advance
+                    . Don't miss out secure your experience today and explore the great outdoors for less.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; 2025 Eco Trek Tours and Travel .All rights reserved.</p>
+    </footer>
+</body>
+<script>
+
+</script>
+
+</html>
